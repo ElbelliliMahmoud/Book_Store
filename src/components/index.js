@@ -1,0 +1,8 @@
+export { default as Navbar } from './navbar/Navbar'
+export { default as Footer } from './footer/Footer'
+export { default as Content } from './content/Content'
+export { default as Button } from './button/Button'
+export { default as Slider } from './slider/Slider'
+export { default as Container} from './container/Container'
+
+

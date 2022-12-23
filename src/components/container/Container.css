@@ -1,0 +1,33 @@
+.container__description {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.block_image img {
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+}
+
+.block__description h2 {
+    color: var(--color-black);
+    font-size: 24px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: capitalize;
+    padding-bottom: .5rem;
+}
+
+.block__description p {
+    color: var( --light-color);
+    font-size: 18px;
+    line-height: 20px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+}

@@ -1,0 +1,8 @@
+export { default as Home} from './home/Home'
+export { default as About} from './about/About'
+export { default as Contact} from './contact/Contact'
+export { default as BookList} from './booklist/BookList'
+export { default as Favorites} from './favorites/Favorites'
+export { default as PageNotFound} from './pagenotfound/PageNotFound'
+export { default as BookDetails} from './bookdetails/BookDetails'
+export { default as SignIn} from './signin/SignIn'
