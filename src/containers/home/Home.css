@@ -29,7 +29,8 @@
             padding: 1rem 2%;
         }
         
-        .book__home-featured {
+        .book__home-featured,
+        .book__home-review {
             padding: 1rem 2%;
         }
         

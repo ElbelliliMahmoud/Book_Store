@@ -1,5 +1,4 @@
 import React from 'react'
-import {AiTwotoneStar} from 'react-icons/ai'
 import { Rating } from 'react-simple-star-rating'
 import './Card.css';
 const Card = ({imgUrl, title, new_price, old_price, rating}) => {
