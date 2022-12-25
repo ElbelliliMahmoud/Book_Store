@@ -1,10 +1,11 @@
 import React from 'react'
 import './Home.css'
 import 'swiper/css'
+import "swiper/css/free-mode";
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import { images, data } from '../../constants';
-import { Button, Container, Content, Slider } from '../../components';
+import { Button, Card, Container, Content, Heading, Slider } from '../../components';
 
 
 const Home = () => {
@@ -21,8 +22,19 @@ const Home = () => {
       </div>
       <div className="book__home-container">
         {data.containers.map((container, index) => (
-          <Container key={container.title + index} title={container.title}  description={container.description} imgUrl={container.imgUrl} />
+          <Container key={container.title + index} title={container.title} description={container.description} imgUrl={container.imgUrl} />
         ))}
+      </div>
+      <div className="book__home-featured">
+        <Heading title="featured books" />
+        <div className="book__home-feature">
+          {data.cards.map((card, index) => (
+            <div className="book__home-featured_book">
+              <Card key={card.title + index} imgUrl={card.imgUrl} title={card.title} new_price={card.new_price} old_price={card.old_price} rating={card.rating} />
+              <Button title="Add To Cart" />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

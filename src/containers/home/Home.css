@@ -29,6 +29,33 @@
             padding: 1rem 2%;
         }
         
+        .book__home-featured {
+            padding: 1rem 2%;
+        }
+        
+        .book__home-feature {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .book__home-featured_book {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--light-color);
+            text-align: center;
+            margin: 1rem;
+        }
+        
         @media screen and (max-width:991px) {
             .book__home-description {
                 flex-direction: column;

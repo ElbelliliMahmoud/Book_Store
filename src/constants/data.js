@@ -44,7 +44,6 @@ const books = [
 ];
 
 const containers = [
-
   {
     index: 0,
     imgUrl: images.shipping,
@@ -69,7 +68,73 @@ const containers = [
     title: "24/7 support",
     description: "call us anytime",
   },
-
 ];
 
-export default { books,containers };
+const cards = [
+  {
+    index: 0,
+    imgUrl: images.book1,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 3.5,
+  },
+  {
+    index: 1,
+    imgUrl: images.book2,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 4.5,
+  },
+  {
+    index: 2,
+    imgUrl: images.book3,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 4,
+  },
+  {
+    index: 3,
+    imgUrl: images.book4,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 5,
+  },
+  {
+    index: 4,
+    imgUrl: images.book5,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 3.5,
+  },
+  {
+    index: 5,
+    imgUrl: images.book6,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 3.5,
+  },
+  {
+    index: 6,
+    imgUrl: images.book7,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 3.5,
+  },
+  {
+    index: 7,
+    imgUrl: images.book8,
+    title: "featured books",
+    new_price: "$15.99",
+    old_price: "$20.99",
+    rating: 3.5,
+  },
+];
+
+export default { books, containers, cards };

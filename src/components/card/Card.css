@@ -1,0 +1,43 @@
+.book__home-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.book__home-card img {
+    height: 20rem;
+}
+
+.book__home-card_description h3 {
+    padding: .5rem 0;
+    color: var(--color-black);
+    font-size: 20px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+
+.book__home-card_description .price {
+    padding: .5rem 0;
+    color: var(--color-black);
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.book__home-card_description .price span {
+    color: var(--light-color);
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.book__home-card_description .rating svg {
+    color: var(--color-green);
+    width: 1.5rem;
+    height: 1.5rem;
+}

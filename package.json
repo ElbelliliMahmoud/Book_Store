@@ -17,6 +17,7 @@
     "react-icons": "^4.7.1",
     "react-router": "^6.5.0",
     "react-router-dom": "^6.5.0",
+    "react-simple-star-rating": "^5.1.7",
     "swiper": "^8.4.5"
   },
   "devDependencies": {
