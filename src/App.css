@@ -63,3 +63,7 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+.app {
+    position: relative;
+}

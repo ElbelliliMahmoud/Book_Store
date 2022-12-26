@@ -7,5 +7,6 @@ export { default as Container } from './container/Container'
 export { default as Heading } from './heading/heading'
 export { default as Card } from './card/Card'
 export { default as Review } from './review/Review'
+export { default as ScrollTop } from './scroll_top/ScrollTop'
 
 

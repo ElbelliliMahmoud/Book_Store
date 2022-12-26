@@ -42,8 +42,18 @@
     font-size: 15px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-green);
+}
+
 @media screen and (max-width:600px) {
     .review__block {
         height: 30rem;
+    }
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination {
+        display: none;
     }
 }

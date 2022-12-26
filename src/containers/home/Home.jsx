@@ -5,7 +5,7 @@ import "swiper/css/free-mode";
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
 import { images, data } from '../../constants';
-import { Button, Card, Container, Content, Heading, Review, Slider } from '../../components';
+import { Button, Card, Container, Content, Heading, Review, Slider,ScrollTop } from '../../components';
 
 
 const Home = () => {
@@ -40,6 +40,7 @@ const Home = () => {
         <Heading title="client's reviews" />
         <Review />
       </div>
+        <ScrollTop/>
     </div>
   )
 }

@@ -1,0 +1,101 @@
+.book__newsletter {
+    padding: 2rem 4rem;
+    border: 1px solid var(--color-black);
+    background: var(--color-bg);
+    margin: 2rem 4rem;
+}
+
+.book__newsletter-heading {
+    text-align: center;
+}
+
+.headtext__cormorant {
+    font-family: var(--font-family);
+    color: var(--color-green);
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: .04em;
+    text-transform: capitalize;
+    padding: 1rem;
+}
+
+.p__cormorant {
+    font-family: var(--font-family);
+    color: var(--color-black);
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: capitalize;
+    font-feature-settings: "tnum" on, "lnum" on;
+    line-height: 29.9px;
+    font-size: 23px;
+}
+
+.p__description {
+    font-family: var(--font-family);
+    color: var(--light-color);
+    font-weight: 400;
+    letter-spacing: .04em;
+    text-transform: capitalize;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.book__newsletter-input {
+    flex-direction: row;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book__newsletter-input input {
+    width: 620px;
+    border: 1px solid var(--color-green);
+    border-radius: 5px;
+    font-family: var(--font-family);
+    color: var(--color-white);
+    margin-right: 2rem;
+    background: var(--color-green);
+    outline: none;
+    padding: .9rem 3rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.book__newsletter-input button {
+    width: max-content;
+}
+
+@media screen and (min-width: 2000px) {
+    .book__newsletter-input input {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .book__newsletter-input {
+        flex-direction: column;
+        width: 100%;
+    }
+    .book__newsletter-input input {
+        margin: 0 0 2rem 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .book__newsletter {
+        padding: 2rem 0;
+        border: none;
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .book__newsletter-heading h1 {
+        font-size: 32px;
+        line-height: 50px;
+    }
+}
