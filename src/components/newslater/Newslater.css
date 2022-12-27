@@ -48,7 +48,8 @@
     align-items: center;
 }
 
-.book__newsletter-input input {
+.book__newsletter-input input,
+.book__newsletter-input input::placeholder {
     width: 620px;
     border: 1px solid var(--color-green);
     border-radius: 5px;

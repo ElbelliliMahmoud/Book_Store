@@ -18,9 +18,12 @@
     font-weight: 800;
     line-height: 30px;
     text-transform: capitalize;
+    width: auto;
+    height: 40px;
+    overflow: hidden;
 }
 
-.book__home-card_description .price {
+.book__home-card_description p {
     padding: .5rem 0;
     color: var(--color-black);
     font-size: 18px;
@@ -30,7 +33,7 @@
     line-height: 20px;
 }
 
-.book__home-card_description .price span {
+.book__home-card_description p span {
     color: var(--light-color);
     font-size: 15px;
     text-decoration: line-through;

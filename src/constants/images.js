@@ -20,6 +20,7 @@ import pic3 from '../assets/pic-3.png';
 import pic4 from '../assets/pic-4.png';
 import pic5 from '../assets/pic-5.png';
 import pic6 from '../assets/pic-6.png';
+import loader_book from '../assets/loader_book.svg'
 
 export default {
   loader,
@@ -44,4 +45,5 @@ export default {
   pic4,
   pic5,
   pic6,
+  loader_book,
 };

@@ -1,5 +1,5 @@
 .product-images-slider .swiper-slide {
-    padding-top: 62%;
+    padding-top: 75%;
     overflow: hidden;
     position: relative;
 }
@@ -8,7 +8,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
+    object-fit: cover;
+    height: auto;
 }
 
 .product-images-slider .swiper-button-prev {

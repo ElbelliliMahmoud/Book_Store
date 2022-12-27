@@ -1,0 +1,73 @@
+.book__booklist {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book__booklist_books {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book__home-heading {
+    margin-top: 3%;
+    width: 100%;
+}
+
+.loader__book {
+    width: 50px;
+    height: 50px;
+    margin: 2rem 0;
+}
+
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+    cursor: pointer;
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.paginationBttns a:hover {
+    color: var(--color-white);
+    background-color: var(--color-green);
+}
+
+.paginationActive a {
+    color: var(--color-white);
+    background-color: var(--color-green);
+}
+
+.paginationDisabled a,
+.paginationDisabled a:hover {
+    color: var(--color-white);
+    background-color: var(--light-color);
+    border: 1px solid var(--light-color);
+}
+
+@media screen and (max-width:600px) {
+    .previous,
+    .next {
+        display: none;
+    }
+}

@@ -1,45 +1,38 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Slider.css';
-import {data} from '../../constants'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Thumbs } from 'swiper'
-
+import { API_URL } from '../../api/books'
+import axios from 'axios'
 const Slider = () => {
-  const [activeThumb, setActiveThumb] = useState()
-  return(
+  const [books, setBooks] = useState([]);
+  const book_slice = books.slice(0, 8);
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((res) => {
+        setBooks(res.data);
+      })
+      .catch((err) => console.log(err))
+  }, []);
+
+  return (
     <>
       <Swiper
         loop={true}
+        slidesPerGroup={1}
+        slidesPerView={1}
         spaceBetween={10}
         navigation={true}
-        Thumbs={{ swiper: activeThumb }}
         modules={[Navigation, Thumbs]}
         grabCursor={true}
         className='product-images-slider'
-      > 
+      >
 
         {
-          data.books.map((img, index) => (
+          book_slice.map((book, index) => (
             <SwiperSlide key={index}>
-              <img src={img.imgUrl} alt={`image-${index}`} />
-            </SwiperSlide>
-          ))
-        }
-      </Swiper>
-      <Swiper
-        onSwiper={setActiveThumb}
-        loop={true}
-        spaceBetween={10}
-        slidesPerView={4}
-        modules={[Navigation, Thumbs]}
-        className='product-images-slider-thumbs'
-      >
-        {
-          data.books.map((img, index) => (
-            <SwiperSlide key={index}>
-              <div className="product-images-slider-thumbs-wrapper">
-                <img src={img.imgUrl} alt={`image-${index}`} />
-              </div>
+              <img src={book.image_url} alt={`image-${index}`} />
             </SwiperSlide>
           ))
         }

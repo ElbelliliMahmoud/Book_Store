@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Home.css'
 import 'swiper/css'
 import "swiper/css/free-mode";
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
+import { API_URL } from '../../api/books'
+import axios from 'axios'
 import { images, data } from '../../constants';
-import { Button, Card, Container, Content, Heading, Review, Slider,ScrollTop } from '../../components';
+import { Button, Card, Container, Content, Heading, Review, Slider, ScrollTop } from '../../components';
 
 
 const Home = () => {
+  const [books, setBooks] = useState([]);
+  const book_slice = books.slice(0, 8);
+  useEffect(() => {
+    axios
+      .get(API_URL)
+      .then((res) => {
+        setBooks(res.data);
+      })
+      .catch((err) => console.log(err))
+  }, []);
+
+
   return (
     <div className='book__home'>
       <div className="book__home-description" style={{ backgroundImage: `url(${images.banner})` }}>
@@ -28,10 +42,10 @@ const Home = () => {
       <div className="book__home-featured">
         <Heading title="featured books" />
         <div className="book__home-feature">
-          {data.cards.map((card, index) => (
-            <div className="book__home-featured_book">
-              <Card key={card.title + index} imgUrl={card.imgUrl} title={card.title} new_price={card.new_price} old_price={card.old_price} rating={card.rating} />
-              <Button title="Add To Cart" />
+          {book_slice.map((book, index) => (
+            <div className="book__home-featured_book" key={index}>
+              <Card image_url={book.image_url} title={book.title} authors={book.authors} format={book.format} rating={book.rating} />
+              <Button title="Add To Favorite" />
             </div>
           ))}
         </div>
@@ -40,7 +54,7 @@ const Home = () => {
         <Heading title="client's reviews" />
         <Review />
       </div>
-        <ScrollTop/>
+      <ScrollTop />
     </div>
   )
 }

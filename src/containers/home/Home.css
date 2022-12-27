@@ -48,7 +48,7 @@
             align-items: center;
             flex-direction: column;
             height: auto;
-            width: auto;
+            width: 20%;
             padding: 1rem;
             position: relative;
             overflow: hidden;
@@ -72,10 +72,16 @@
             .book__home-container {
                 padding: 3rem 2rem;
             }
+            .book__home-featured_book {
+                width: 40%;
+            }
         }
         
         @media screen and (max-width:600px) {
             .book__home-container {
                 padding: 1rem;
+            }
+            .book__home-featured_book {
+                width: 100%;
             }
         }
