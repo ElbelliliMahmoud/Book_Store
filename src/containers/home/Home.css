@@ -55,6 +55,7 @@
             border: 1px solid var(--light-color);
             text-align: center;
             margin: 1rem;
+            cursor: pointer;
         }
         
         @media screen and (max-width:991px) {

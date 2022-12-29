@@ -12,7 +12,7 @@ const Newslater = () => {
       </div>
       <div className="book__newsletter-input flex__center">
         <input type="email" placeholder="Enter your email address" />
-        <Button title="Subscribe"/> 
+        <Button children="Subscribe" type="submit" onClick={() => {}}/> 
       </div>
     </div>
   )

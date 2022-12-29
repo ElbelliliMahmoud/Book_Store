@@ -1,0 +1,35 @@
+.book__about-info_title {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.book__about-info_title h3 {
+    padding: .5rem 0;
+    color: var(--color-black);
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.book__about-info_title svg {
+    height: 25px;
+    width: 25px;
+    color: var(--color-green);
+}
+
+.book__about-info p {
+    color: var( --light-color);
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: capitalize;
+}

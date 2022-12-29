@@ -21,8 +21,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="book__navbar-icons">
-          <Link to=""><FaHeart color="#fff" size={27} /> </Link>
-          <Link to="/favorites"><FaShoppingCart color="#fff" size={27} /> </Link>
+          <Link to="/favorites"><FaHeart color="#fff" size={27} /> </Link>
+          <Link to="/shopping"><FaShoppingCart color="#fff" size={27} /> </Link>
           <Link to="/signin"><FaUser color="#fff" size={27} /> </Link>
         </div>
         <div className="book__navbar-menu_mobile">

@@ -1,0 +1,26 @@
+.book__message {
+    display: flex;
+    height: 40vh;
+}
+
+.book__message-text {
+    font-family: var(--font-family);
+    color: var(--color-subtext);
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: .04em;
+    text-transform: capitalize;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .book__message {
+        height: 20vh;
+    }
+    .book__message-text {
+        font-size: 27px;
+    }
+}

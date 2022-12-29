@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import { Home, BookList, About, Contact, Favorites, BookDetails, PageNotFound, SignIn } from './containers'
-import { Navbar, Footer } from './components'
+import { Home, BookList, About, Contact, Favorites, BookDetails, PageNotFound, SignIn, Shopping } from './containers'
+import { Navbar, Footer, ScrollTop } from './components'
 import { images } from './constants'
 
 const App = () => {
@@ -29,10 +29,12 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path='/favorites' element={<Favorites />} />
-            <Route path='/book/:id' element={<BookDetails />} />
+            <Route path='/shopping' element={<Shopping />} />
+            <Route path='/books/:id' element={<BookDetails />} />
             <Route path='*' element={<PageNotFound />} />
             <Route path='/signin' element={<SignIn />} />
           </Routes>
+          <ScrollTop />
           <Footer />
         </>
       )}

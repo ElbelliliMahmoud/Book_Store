@@ -1,9 +1,9 @@
 import React from 'react'
 import { Rating } from 'react-simple-star-rating'
 import './Card.css';
-const Card = ({ image_url, title, authors, format, rating }) => {
+const Card = ({ image_url, title, authors, format, rating , onClick}) => {
   return (
-    <div className='book__home-card'>
+    <div className='book__home-card' onClick={onClick}>
       <img src={image_url} alt="" />
       <div className="book__home-card_description">
         <h3>{title}</h3>

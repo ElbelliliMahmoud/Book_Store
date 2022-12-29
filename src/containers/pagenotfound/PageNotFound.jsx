@@ -1,9 +1,11 @@
 import React from 'react'
+import './PageNotFound.css'
+import { Message } from '../../components'
 
 const PageNotFound = () => {
   return (
-    <div>
-      PageNotFound
+    <div className='book__page'>
+      <Message message="Sorry Page Not Found"/>
     </div>
   )
 }

@@ -7,12 +7,23 @@ import 'swiper/css/thumbs'
 import { API_URL } from '../../api/books'
 import axios from 'axios'
 import { images, data } from '../../constants';
-import { Button, Card, Container, Content, Heading, Review, Slider, ScrollTop } from '../../components';
+import { Button, Card, Container, Content, Heading, Review, Slider } from '../../components';
+import { useAppContext } from '../../context/AppContext'
+import { useNavigate } from 'react-router-dom'
 
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   const book_slice = books.slice(0, 8);
+
+  const { favorites, addToFavorites, removeFromFavorites } = useAppContext()
+  const favoritesChecker = (id) => {
+    const boolean = favorites.some((book) => book.id === id)
+    return boolean
+  }
+
+  const navigate = useNavigate()
+
   useEffect(() => {
     axios
       .get(API_URL)
@@ -28,7 +39,7 @@ const Home = () => {
       <div className="book__home-description" style={{ backgroundImage: `url(${images.banner})` }}>
         <div className="book__home-description_content">
           <Content deal="deal of the day" title="upto 75% off" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias sit necessitatibus, aliquid ex minima at!" />
-          <Button title="show now" />
+          <Button children="show now" type="button" onClick={() => { }} />
         </div>
         <div className="book__home-book_slider">
           <Slider />
@@ -43,9 +54,12 @@ const Home = () => {
         <Heading title="featured books" />
         <div className="book__home-feature">
           {book_slice.map((book, index) => (
-            <div className="book__home-featured_book" key={index}>
-              <Card image_url={book.image_url} title={book.title} authors={book.authors} format={book.format} rating={book.rating} />
-              <Button title="Add To Favorite" />
+            <div className="book__home-featured_book" key={index} >
+              <Card image_url={book.image_url} title={book.title} authors={book.authors} format={book.format} rating={book.rating} onClick={()=> {navigate(`/books/${book.id}`)}}/>
+              {favoritesChecker(book.id)
+                ? <Button children="Remove Favorite" type="button" onClick={() => removeFromFavorites(book.id)} />
+                : <Button children="Add Favorite" type="button" onClick={() => addToFavorites(book)} />
+              }
             </div>
           ))}
         </div>
@@ -54,7 +68,6 @@ const Home = () => {
         <Heading title="client's reviews" />
         <Review />
       </div>
-      <ScrollTop />
     </div>
   )
 }

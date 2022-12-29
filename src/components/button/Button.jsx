@@ -1,11 +1,16 @@
 import React from 'react'
 import './Button.css'
 
-const Button = ({title}) => {
+const Button = ({ children, type, className, id, onClick }) => {
   return (
-    <p className='book__show-now'>
-      {title}
-    </p>
+    <button
+      type={type ? type : "button"}
+      className={className ? `book__show-now ${className}` : "book__show-now"}
+      id={id}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   )
 }
 
