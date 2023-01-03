@@ -10,6 +10,7 @@ export { default as Review } from './review/Review'
 export { default as ScrollTop } from './scroll_top/ScrollTop'
 export { default as Description } from './description/Description'
 export { default as Message } from './message/Message'
+export {default as FormControl} from './formcontrol/FormControl'
 
 
 

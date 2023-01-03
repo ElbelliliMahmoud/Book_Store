@@ -1,0 +1,16 @@
+.form-control {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.error {
+    color: var(--color-subtext);
+    padding: .5rem 0;
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 500;
+}

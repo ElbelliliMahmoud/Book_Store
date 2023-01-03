@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import { Home, BookList, About, Contact, Favorites, BookDetails, PageNotFound, SignIn, Shopping } from './containers'
+import { Home,SignUp, BookList, About, Contact, Favorites, BookDetails, PageNotFound, SignIn, Shopping } from './containers'
 import { Navbar, Footer, ScrollTop } from './components'
 import { images } from './constants'
 
@@ -33,6 +33,7 @@ const App = () => {
             <Route path='/books/:id' element={<BookDetails />} />
             <Route path='*' element={<PageNotFound />} />
             <Route path='/signin' element={<SignIn />} />
+            <Route path='/signup' element={<SignUp />} />
           </Routes>
           <ScrollTop />
           <Footer />
